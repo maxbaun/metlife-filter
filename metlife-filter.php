@@ -15,7 +15,7 @@ require_once plugin_dir_path(__FILE__) . 'src/classes/Helpers.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Activation.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/JsonManifest.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Assets.php';
-require_once plugin_dir_path(__FILE__) . 'src/classes/ShortcodeExample.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/ShortcodeFilter.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Updater.php';
 
 use D3\MLF;
@@ -23,7 +23,7 @@ use D3\MLF\JsonManifest;
 use D3\MLF\Config;
 use D3\MLF\Assets;
 use D3\MLF\Activation;
-use D3\MLF\ShortcodeExample;
+use D3\MLF\ShortcodeFilter;
 
 add_action('init', function () {
 	$paths = [
@@ -35,18 +35,18 @@ add_action('init', function () {
 	Config::setManifest($manifest);
 
 	Assets::init($manifest);
-	ShortcodeExample::init();
+	ShortcodeFilter::init();
 
 	define('WP_GITHUB_FORCE_UPDATE', true);
 
 	if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
 		$config = array(
 			'slug' => plugin_basename(__FILE__),
-			'proper_folder_name' => 'd3-plugin-boilerplate',
-			'api_url' => 'https://api.github.com/repos/maxbaun/wordpress-plugin-boilerplate',
-			'raw_url' => 'https://raw.github.com/maxbaun/wordpress-plugin-boilerplate/master',
-			'github_url' => 'https://github.com/maxbaun/wordpress-plugin-boilerplate',
-			'zip_url' => 'https://github.com/maxbaun/wordpress-plugin-boilerplate/archive/master.zip',
+			'proper_folder_name' => 'metlife-filter',
+			'api_url' => 'https://api.github.com/repos/maxbaun/metlife-filter',
+			'raw_url' => 'https://raw.github.com/maxbaun/metlife-filter/master',
+			'github_url' => 'https://github.com/maxbaun/metlife-filter',
+			'zip_url' => 'https://github.com/maxbaun/metlife-filter/archive/master.zip',
 			'sslverify' => true,
 			'requires' => '3.0', //version of wordpress that is required
 			'tested' => '3.3', //version of wordpress udated to

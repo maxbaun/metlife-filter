@@ -8,9 +8,9 @@ const rootPath = process.cwd();
 const config = {
 	copy: 'images/**/*',
 	proxyUrl: 'http://localhost:3000',
-	devUrl: 'http://d3.dev:8002',
+	devUrl: 'http://metlife.dev',
 	cacheBusting: '[name]_[hash:8]',
-	publicPath: '/wp-content/plugins/metlife-filter',
+	publicPath: '/src/plugins/metlife-filter',
 	paths: {
 		root: rootPath,
 		assets: path.join(rootPath, 'assets'),

@@ -1,0 +1,19 @@
+.mlf-filter-button,
+input[type="submit"].mlf-filter-button {
+	background-color: #F4911E;
+	border-radius: 0px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: "open_sanscondensed_light";
+	letter-spacing: 1px;
+	line-height: 20px;
+	transition: background-color $transTime linear 0s;
+	font-size: 16px;
+	cursor: pointer;
+	color: $white;
+	display: inline-block;
+
+	&:hover {
+		background-color: $black2;
+	}
+}

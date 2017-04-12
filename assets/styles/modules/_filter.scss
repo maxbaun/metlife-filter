@@ -1,0 +1,41 @@
+.mlf-filter {
+	margin: 0 auto;
+	@include clearfix();
+}
+
+.mlf-filter-form {
+	> * {
+		float: left !important;
+		padding: 0 20px !important;
+		vertical-align: middle !important;
+		line-height: 55px;
+	}
+}
+
+.mlf-filter-title {
+	font-weight: bold !important;
+	text-align: center;
+	margin: auto 0px;
+	float: left;
+	border-right: 1px solid $grey2;
+}
+
+.mlf-filter-dropdown-group {
+	margin-top: 0;
+	margin-right: 10px;
+	border-left: $grey 1px solid;
+	display: block;
+}
+
+a.mlf-filter-link {
+	margin: 0 0 0 20px;
+	font-size: 16px;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+.mlf-filter-form-submit {
+	input {
+		margin-bottom: 0px;
+	}
+}

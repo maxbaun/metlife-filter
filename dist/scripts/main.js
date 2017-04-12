@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "69e0a7f3b1c2d6e591b3"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e6509a0a3155cdc6953b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -700,36 +700,17 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://localhost:3000/wp-content/plugins/metlife-filter/dist/";
+/******/ 	__webpack_require__.p = "http://localhost:3000/src/plugins/metlife-filter/dist/";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(31)(__webpack_require__.s = 31);
+/******/ 	return hotCreateRequire(32)(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/* unknown exports provided */
-/* all exports used */
-/*!******************************************************************************************************************************************************!*\
-  !*** ../~/css-loader?+sourceMap!../~/postcss-loader!../~/resolve-url-loader?+sourceMap!../~/sass-loader/lib/loader.js?+sourceMap!./styles/main.scss ***!
-  \******************************************************************************************************************************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 14)(true);
-// imports
-
-
-// module
-exports.push([module.i, "", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"main.scss","sourceRoot":""}]);
-
-// exports
-
-
-/***/ }),
-/* 1 */
 /* unknown exports provided */
 /* all exports used */
 /*!*************************!*\
@@ -738,6 +719,25 @@ exports.push([module.i, "", "", {"version":3,"sources":[],"names":[],"mappings":
 /***/ (function(module, exports) {
 
 module.exports = jQuery;
+
+/***/ }),
+/* 1 */
+/* unknown exports provided */
+/* all exports used */
+/*!******************************************************************************************************************************************************!*\
+  !*** ../~/css-loader?+sourceMap!../~/postcss-loader!../~/resolve-url-loader?+sourceMap!../~/sass-loader/lib/loader.js?+sourceMap!./styles/main.scss ***!
+  \******************************************************************************************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 15)(true);
+// imports
+
+
+// module
+exports.push([module.i, ".mlf-filter {\n  margin: 0 auto;\n}\n\n.mlf-filter:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.mlf-filter-form > * {\n  float: left !important;\n  padding: 0 20px !important;\n  vertical-align: middle !important;\n  line-height: 55px;\n}\n\n.mlf-filter-title {\n  font-weight: bold !important;\n  text-align: center;\n  margin: auto 0px;\n  float: left;\n  border-right: 1px solid #484848;\n}\n\n.mlf-filter-dropdown-group {\n  margin-top: 0;\n  margin-right: 10px;\n  border-left: #757575 1px solid;\n  display: block;\n}\n\na.mlf-filter-link {\n  margin: 0 0 0 20px;\n  font-size: 16px;\n  text-decoration: underline;\n  font-weight: normal;\n}\n\n.mlf-filter-form-submit input {\n  margin-bottom: 0px;\n}\n\n.mlf-filter-button,\ninput[type=\"submit\"].mlf-filter-button {\n  background-color: #F4911E;\n  border-radius: 0px;\n  font-weight: bold;\n  text-transform: uppercase;\n  font-family: \"open_sanscondensed_light\";\n  letter-spacing: 1px;\n  line-height: 20px;\n  -webkit-transition: background-color 0.3s linear 0s;\n  -o-transition: background-color 0.3s linear 0s;\n  transition: background-color 0.3s linear 0s;\n  font-size: 16px;\n  cursor: pointer;\n  color: #FFF;\n  display: inline-block;\n}\n\n.mlf-filter-button:hover,\ninput[type=\"submit\"].mlf-filter-button:hover {\n  background-color: #33363B;\n}\n\n.mlf-filter-dropdown-group * {\n  display: inline-block;\n}\n\n.mlf-filter-dropdown-group label {\n  margin-right: 10px;\n}\n\n.mlf-filter-dropdown {\n  position: relative;\n}\n\n.mlf-filter-dropdown-selected {\n  background-color: #FFF;\n  width: 171px;\n  line-height: 24px;\n  min-height: 25px;\n  padding: 5px 15px 1px 15px;\n  display: block;\n  position: relative;\n  text-align: left;\n  cursor: pointer;\n}\n\n.mlf-filter-dropdown-selected::after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 8px 8px 0 8px;\n  border-color: #F4911E transparent transparent transparent;\n  position: absolute;\n  right: 10px;\n  top: 12px;\n}\n\n.mlf-filter-dropdown-selected-label {\n  color: #000;\n  margin: 0;\n  font-size: 14px;\n  text-align: left;\n  line-height: 22px;\n  font-family: Arial, Helvetica, sans-serif;\n  display: block;\n  cursor: pointer;\n}\n\n.mlf-filter-dropdown-list {\n  background-color: #FFF;\n  border: 1px solid #484848;\n  color: #484848;\n  display: none;\n  left: 0px;\n  padding: 2px 15px 2px 5px;\n  position: absolute;\n  bottom: -107px;\n  width: 200px;\n  list-style: outside none none;\n  height: 100px;\n  overflow: auto;\n  z-index: 1;\n}\n\n.mlf-filter-dropdown-list li {\n  float: none;\n  text-align: left;\n  font-family: arial;\n  font-size: 14px;\n}\n\n", "", {"version":3,"sources":["/Users/maxbaun/Projects/D3/metlife/src/plugins/metlife-filter/assets/styles/assets/styles/modules/_filter.scss","/Users/maxbaun/Projects/D3/metlife/src/plugins/metlife-filter/assets/styles/main.scss","/Users/maxbaun/Projects/D3/metlife/src/plugins/metlife-filter/assets/styles/assets/styles/utils/_mixins.scss","/Users/maxbaun/Projects/D3/metlife/src/plugins/metlife-filter/assets/styles/assets/styles/modules/_buttons.scss","/Users/maxbaun/Projects/D3/metlife/src/plugins/metlife-filter/assets/styles/assets/styles/modules/_dropdowns.scss"],"names":[],"mappings":"AAAA;EACC,eAAA;CCCA;;ADFD;EEEE,YAAA;EACA,eAAA;EACA,YAAA;CDID;;ADHD;EAEE,uBAAA;EACA,2BAAA;EACA,kCAAA;EACA,kBAAA;CCKD;;ADDD;EACC,6BAAA;EACA,mBAAA;EACA,iBAAA;EACA,YAAA;EACA,gCAAA;CCIA;;ADDD;EACC,cAAA;EACA,mBAAA;EACA,+BAAA;EACA,eAAA;CCIA;;ADDD;EACC,mBAAA;EACA,gBAAA;EACA,2BAAA;EACA,oBAAA;CCIA;;ADDD;EAEE,mBAAA;CCGD;;AEzCD;;EAEC,0BAAA;EACA,mBAAA;EACA,kBAAA;EACA,0BAAA;EACA,wCAAA;EACA,oBAAA;EACA,kBAAA;EACA,oDAAA;EAAA,+CAAA;EAAA,4CAAA;EACA,gBAAA;EACA,gBAAA;EACA,YAAA;EACA,sBAAA;CF4CA;;AE1CA;;EACC,0BAAA;CF8CD;;AG9DD;EAEE,sBAAA;CHgED;;AGlED;EAME,mBAAA;CHgED;;AG5DD;EACC,mBAAA;CH+DA;;AG5DD;EACC,uBAAA;EACA,aAAA;EACA,kBAAA;EACA,iBAAA;EACA,2BAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;EACA,gBAAA;CH+DA;;AGxED;EAYE,YAAA;EACA,SAAA;EACA,UAAA;EACA,oBAAA;EACA,4BAAA;EACA,0DAAA;EACA,mBAAA;EACA,YAAA;EACA,UAAA;CHgED;;AG5DD;EACC,YAAA;EACA,UAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACG,0CAAA;EACH,eAAA;EACA,gBAAA;CH+DA;;AG5DD;EACC,uBAAA;EACA,0BAAA;EACA,eAAA;EACA,cAAA;EACA,UAAA;EACA,0BAAA;EACA,mBAAA;EACA,eAAA;EACA,aAAA;EACA,8BAAA;EACA,cAAA;EACA,eAAA;EACA,WAAA;CH+DA;;AG5ED;EAgBE,YAAA;EACG,iBAAA;EACA,mBAAA;EACA,gBAAA;CHgEJ","file":"main.scss","sourcesContent":[".mlf-filter {\n\tmargin: 0 auto;\n\t@include clearfix();\n}\n\n.mlf-filter-form {\n\t> * {\n\t\tfloat: left !important;\n\t\tpadding: 0 20px !important;\n\t\tvertical-align: middle !important;\n\t\tline-height: 55px;\n\t}\n}\n\n.mlf-filter-title {\n\tfont-weight: bold !important;\n\ttext-align: center;\n\tmargin: auto 0px;\n\tfloat: left;\n\tborder-right: 1px solid $grey2;\n}\n\n.mlf-filter-dropdown-group {\n\tmargin-top: 0;\n\tmargin-right: 10px;\n\tborder-left: $grey 1px solid;\n\tdisplay: block;\n}\n\na.mlf-filter-link {\n\tmargin: 0 0 0 20px;\n\tfont-size: 16px;\n\ttext-decoration: underline;\n\tfont-weight: normal;\n}\n\n.mlf-filter-form-submit {\n\tinput {\n\t\tmargin-bottom: 0px;\n\t}\n}\n",".mlf-filter {\n  margin: 0 auto;\n}\n\n.mlf-filter:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.mlf-filter-form > * {\n  float: left !important;\n  padding: 0 20px !important;\n  vertical-align: middle !important;\n  line-height: 55px;\n}\n\n.mlf-filter-title {\n  font-weight: bold !important;\n  text-align: center;\n  margin: auto 0px;\n  float: left;\n  border-right: 1px solid #484848;\n}\n\n.mlf-filter-dropdown-group {\n  margin-top: 0;\n  margin-right: 10px;\n  border-left: #757575 1px solid;\n  display: block;\n}\n\na.mlf-filter-link {\n  margin: 0 0 0 20px;\n  font-size: 16px;\n  text-decoration: underline;\n  font-weight: normal;\n}\n\n.mlf-filter-form-submit input {\n  margin-bottom: 0px;\n}\n\n.mlf-filter-button,\ninput[type=\"submit\"].mlf-filter-button {\n  background-color: #F4911E;\n  border-radius: 0px;\n  font-weight: bold;\n  text-transform: uppercase;\n  font-family: \"open_sanscondensed_light\";\n  letter-spacing: 1px;\n  line-height: 20px;\n  transition: background-color 0.3s linear 0s;\n  font-size: 16px;\n  cursor: pointer;\n  color: #FFF;\n  display: inline-block;\n}\n\n.mlf-filter-button:hover,\ninput[type=\"submit\"].mlf-filter-button:hover {\n  background-color: #33363B;\n}\n\n.mlf-filter-dropdown-group * {\n  display: inline-block;\n}\n\n.mlf-filter-dropdown-group label {\n  margin-right: 10px;\n}\n\n.mlf-filter-dropdown {\n  position: relative;\n}\n\n.mlf-filter-dropdown-selected {\n  background-color: #FFF;\n  width: 171px;\n  line-height: 24px;\n  min-height: 25px;\n  padding: 5px 15px 1px 15px;\n  display: block;\n  position: relative;\n  text-align: left;\n  cursor: pointer;\n}\n\n.mlf-filter-dropdown-selected::after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 8px 8px 0 8px;\n  border-color: #F4911E transparent transparent transparent;\n  position: absolute;\n  right: 10px;\n  top: 12px;\n}\n\n.mlf-filter-dropdown-selected-label {\n  color: #000;\n  margin: 0;\n  font-size: 14px;\n  text-align: left;\n  line-height: 22px;\n  font-family: Arial, Helvetica, sans-serif;\n  display: block;\n  cursor: pointer;\n}\n\n.mlf-filter-dropdown-list {\n  background-color: #FFF;\n  border: 1px solid #484848;\n  color: #484848;\n  display: none;\n  left: 0px;\n  padding: 2px 15px 2px 5px;\n  position: absolute;\n  bottom: -107px;\n  width: 200px;\n  list-style: outside none none;\n  height: 100px;\n  overflow: auto;\n  z-index: 1;\n}\n\n.mlf-filter-dropdown-list li {\n  float: none;\n  text-align: left;\n  font-family: arial;\n  font-size: 14px;\n}\n\n","@mixin clearfix {\n\t&:after {\n\t\tcontent: \"\";\n\t\tdisplay: table;\n\t\tclear: both;\n\t}\n}\n",".mlf-filter-button,\ninput[type=\"submit\"].mlf-filter-button {\n\tbackground-color: #F4911E;\n\tborder-radius: 0px;\n\tfont-weight: bold;\n\ttext-transform: uppercase;\n\tfont-family: \"open_sanscondensed_light\";\n\tletter-spacing: 1px;\n\tline-height: 20px;\n\ttransition: background-color $transTime linear 0s;\n\tfont-size: 16px;\n\tcursor: pointer;\n\tcolor: $white;\n\tdisplay: inline-block;\n\n\t&:hover {\n\t\tbackground-color: $black2;\n\t}\n}\n",".mlf-filter-dropdown-group {\n\t* {\n\t\tdisplay: inline-block;\n\t}\n\n\tlabel {\n\t\tmargin-right: 10px;\n\t}\n}\n\n.mlf-filter-dropdown {\n\tposition: relative;\n}\n\n.mlf-filter-dropdown-selected {\n\tbackground-color: $white;\n\twidth: 171px;\n\tline-height: 24px;\n\tmin-height: 25px;\n\tpadding: 5px 15px 1px 15px;\n\tdisplay: block;\n\tposition: relative;\n\ttext-align: left;\n\tcursor: pointer;\n\n\t&::after {\n\t\tcontent: \"\";\n\t\twidth: 0;\n\t\theight: 0;\n\t\tborder-style: solid;\n\t\tborder-width: 8px 8px 0 8px;\n\t\tborder-color: $orange transparent transparent transparent;\n\t\tposition: absolute;\n\t\tright: 10px;\n\t\ttop: 12px;\n\t}\n}\n\n.mlf-filter-dropdown-selected-label {\n\tcolor: $black;\n\tmargin: 0;\n\tfont-size: 14px;\n\ttext-align: left;\n\tline-height: 22px;\n    font-family: Arial, Helvetica, sans-serif;\n\tdisplay: block;\n\tcursor: pointer;\n}\n\n.mlf-filter-dropdown-list {\n\tbackground-color: $white;\n\tborder: 1px solid $grey2;\n\tcolor: $grey2;\n\tdisplay: none;\n\tleft: 0px;\n\tpadding: 2px 15px 2px 5px;\n\tposition: absolute;\n\tbottom: -107px;\n\twidth: 200px;\n\tlist-style: outside none none;\n\theight: 100px;\n\toverflow: auto;\n\tz-index: 1;\n\n\tli {\n\t\tfloat: none;\n\t    text-align: left;\n\t    font-family: arial;\n\t    font-size: 14px;\n\t}\n}\n"],"sourceRoot":""}]);
+
+// exports
+
 
 /***/ }),
 /* 2 */
@@ -951,11 +951,11 @@ module.exports = Html5Entities;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(jQuery) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(/*! jquery */ 1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(/*! jquery */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery_ui_bundle__ = __webpack_require__(/*! jquery-ui-bundle */ 20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery_ui_bundle__ = __webpack_require__(/*! jquery-ui-bundle */ 21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery_ui_bundle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery_ui_bundle__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_utils_router__ = __webpack_require__(/*! ./src/utils/router */ 12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_utils_router__ = __webpack_require__(/*! ./src/utils/router */ 13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_routes_common__ = __webpack_require__(/*! ./src/routes/common */ 9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_routes_wpAdmin__ = __webpack_require__(/*! ./src/routes/wpAdmin */ 10);
 
@@ -973,7 +973,7 @@ var routes = new __WEBPACK_IMPORTED_MODULE_2__src_utils_router__["a" /* default 
 
 jQuery(document).ready(function () { return routes.loadEvents(); });
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 1)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
 
 /***/ }),
 /* 4 */
@@ -987,17 +987,17 @@ jQuery(document).ready(function () { return routes.loadEvents(); });
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../~/css-loader?+sourceMap!../../~/postcss-loader!../../~/resolve-url-loader?+sourceMap!../../~/sass-loader/lib/loader.js?+sourceMap!./main.scss */ 0);
+var content = __webpack_require__(/*! !../../~/css-loader?+sourceMap!../../~/postcss-loader!../../~/resolve-url-loader?+sourceMap!../../~/sass-loader/lib/loader.js?+sourceMap!./main.scss */ 1);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 25)(content, {});
+var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 26)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept(/*! !../../~/css-loader?+sourceMap!../../~/postcss-loader!../../~/resolve-url-loader?+sourceMap!../../~/sass-loader/lib/loader.js?+sourceMap!./main.scss */ 0, function() {
-			var newContent = __webpack_require__(/*! !../../~/css-loader?+sourceMap!../../~/postcss-loader!../../~/resolve-url-loader?+sourceMap!../../~/sass-loader/lib/loader.js?+sourceMap!./main.scss */ 0);
+		module.hot.accept(/*! !../../~/css-loader?+sourceMap!../../~/postcss-loader!../../~/resolve-url-loader?+sourceMap!../../~/sass-loader/lib/loader.js?+sourceMap!./main.scss */ 1, function() {
+			var newContent = __webpack_require__(/*! !../../~/css-loader?+sourceMap!../../~/postcss-loader!../../~/resolve-url-loader?+sourceMap!../../~/sass-loader/lib/loader.js?+sourceMap!./main.scss */ 1);
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -1028,7 +1028,7 @@ var options = {
   name: ''
 };
 if (true) {
-  var querystring = __webpack_require__(/*! querystring */ 23);
+  var querystring = __webpack_require__(/*! querystring */ 24);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   if (overrides.path) options.path = overrides.path;
   if (overrides.timeout) options.timeout = overrides.timeout;
@@ -1148,11 +1148,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(/*! strip-ansi */ 24);
+  var strip = __webpack_require__(/*! strip-ansi */ 25);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(/*! ./client-overlay */ 27);
+    overlay = __webpack_require__(/*! ./client-overlay */ 28);
   }
 
   var styles = {
@@ -1205,7 +1205,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(/*! ./process-update */ 28);
+var processUpdate = __webpack_require__(/*! ./process-update */ 29);
 
 var customHandler;
 var subscribeAllHandler;
@@ -1270,7 +1270,7 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?timeout=20000&reload=true", __webpack_require__(/*! ./../webpack/buildin/module.js */ 30)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?timeout=20000&reload=true", __webpack_require__(/*! ./../webpack/buildin/module.js */ 31)(module)))
 
 /***/ }),
 /* 6 */
@@ -1612,15 +1612,21 @@ function fromByteArray (uint8) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_dropdown__ = __webpack_require__(/*! ../utils/dropdown */ 12);
+
+
 /* harmony default export */ __webpack_exports__["a"] = ({
 	init: function init() {
 		// JavaScript to be fired on all pages
 	},
 	finalize: function finalize() {
-		console.log('public plugin js initialized');
+		var dropdowns = jQuery('.mlf-filter-dropdown');
+		console.log('here');
+		jQuery.each(dropdowns, function (elem) { return new __WEBPACK_IMPORTED_MODULE_0__utils_dropdown__["a" /* default */](elem); });
 	}
 });
 
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
 
 /***/ }),
 /* 10 */
@@ -1661,6 +1667,23 @@ function fromByteArray (uint8) {
 
 /***/ }),
 /* 12 */
+/* exports provided: default */
+/* exports used: default */
+/*!***************************************!*\
+  !*** ./scripts/src/utils/dropdown.js ***!
+  \***************************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var Dropdown = function Dropdown(element) {
+	console.log(element);
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Dropdown);
+
+
+/***/ }),
+/* 13 */
 /* exports provided: default */
 /* exports used: default */
 /*!*************************************!*\
@@ -1720,7 +1743,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /* unknown exports provided */
 /* all exports used */
 /*!****************************!*\
@@ -1740,8 +1763,8 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 var base64 = __webpack_require__(/*! base64-js */ 8)
-var ieee754 = __webpack_require__(/*! ieee754 */ 18)
-var isArray = __webpack_require__(/*! isarray */ 19)
+var ieee754 = __webpack_require__(/*! ieee754 */ 19)
+var isArray = __webpack_require__(/*! isarray */ 20)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -3519,10 +3542,10 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../webpack/buildin/global.js */ 29)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../webpack/buildin/global.js */ 30)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /* unknown exports provided */
 /* all exports used */
 /*!***************************************!*\
@@ -3606,10 +3629,10 @@ function toComment(sourceMap) {
   return '/*# ' + data + ' */';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../buffer/index.js */ 13).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../buffer/index.js */ 14).Buffer))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /* unknown exports provided */
 /* all exports used */
 /*!***********************************!*\
@@ -3618,15 +3641,15 @@ function toComment(sourceMap) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(/*! ./lib/xml-entities.js */ 17),
-  Html4Entities: __webpack_require__(/*! ./lib/html4-entities.js */ 16),
+  XmlEntities: __webpack_require__(/*! ./lib/xml-entities.js */ 18),
+  Html4Entities: __webpack_require__(/*! ./lib/html4-entities.js */ 17),
   Html5Entities: __webpack_require__(/*! ./lib/html5-entities.js */ 2),
   AllHtmlEntities: __webpack_require__(/*! ./lib/html5-entities.js */ 2)
 };
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /* unknown exports provided */
 /* all exports used */
 /*!************************************************!*\
@@ -3784,7 +3807,7 @@ module.exports = Html4Entities;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /* unknown exports provided */
 /* all exports used */
 /*!**********************************************!*\
@@ -3950,7 +3973,7 @@ module.exports = XmlEntities;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /* unknown exports provided */
 /* all exports used */
 /*!*****************************!*\
@@ -4045,7 +4068,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /* unknown exports provided */
 /* all exports used */
 /*!*****************************!*\
@@ -4061,7 +4084,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /* unknown exports provided */
 /*!******************************************!*\
   !*** ../~/jquery-ui-bundle/jquery-ui.js ***!
@@ -4077,7 +4100,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 	if ( true ) {
 
 		// AMD. Register as an anonymous module.
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(/*! jquery */ 1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(/*! jquery */ 0) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -22779,7 +22802,7 @@ var effectsEffectTransfer = effect;
 }));
 
 /***/ }),
-/* 21 */
+/* 22 */
 /* unknown exports provided */
 /* all exports used */
 /*!**************************************!*\
@@ -22875,7 +22898,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /* unknown exports provided */
 /* all exports used */
 /*!**************************************!*\
@@ -22972,7 +22995,7 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /* unknown exports provided */
 /* all exports used */
 /*!*************************************!*\
@@ -22983,12 +23006,12 @@ var objectKeys = Object.keys || function (obj) {
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(/*! ./decode */ 21);
-exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ 22);
+exports.decode = exports.parse = __webpack_require__(/*! ./decode */ 22);
+exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ 23);
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /* unknown exports provided */
 /* all exports used */
 /*!********************************!*\
@@ -23006,7 +23029,7 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /* unknown exports provided */
 /* all exports used */
 /*!**************************************!*\
@@ -23048,7 +23071,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(/*! ./fixUrls */ 26);
+	fixUrls = __webpack_require__(/*! ./fixUrls */ 27);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -23307,7 +23330,7 @@ function updateLink(linkElement, options, obj) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /* unknown exports provided */
 /* all exports used */
 /*!************************************!*\
@@ -23407,7 +23430,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /* unknown exports provided */
 /* all exports used */
 /*!*****************************************************!*\
@@ -23456,7 +23479,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(/*! html-entities */ 15).AllHtmlEntities;
+var Entities = __webpack_require__(/*! html-entities */ 16).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -23497,7 +23520,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /* unknown exports provided */
 /* all exports used */
 /*!*****************************************************!*\
@@ -23640,7 +23663,7 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /* unknown exports provided */
 /* all exports used */
 /*!**************************************!*\
@@ -23672,7 +23695,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /* unknown exports provided */
 /* all exports used */
 /*!**************************************!*\
@@ -23705,7 +23728,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /* unknown exports provided */
 /* all exports used */
 /*!**********************************************************************************************************!*\
