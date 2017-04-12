@@ -1,10 +1,10 @@
 <?php
 
 /*
-Plugin Name: D3 Applications Plugin Boilerplate
+Plugin Name: Metlife Filter
 Plugin URI: http://d3applications.com
-Description: Plugin Description
-Version: 1.1.1
+Description: Filter Plugin For Metlife
+Version: 1.0.0
 Author: Max Baun
 Author URI: http://github.com/maxbaun
 License: GPL2
@@ -18,12 +18,12 @@ require_once plugin_dir_path(__FILE__) . 'src/classes/Assets.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/ShortcodeExample.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Updater.php';
 
-use D3\Plugin;
-use D3\Plugin\JsonManifest;
-use D3\Plugin\Config;
-use D3\Plugin\Assets;
-use D3\Plugin\Activation;
-use D3\Plugin\ShortcodeExample;
+use D3\MLF;
+use D3\MLF\JsonManifest;
+use D3\MLF\Config;
+use D3\MLF\Assets;
+use D3\MLF\Activation;
+use D3\MLF\ShortcodeExample;
 
 add_action('init', function () {
 	$paths = [

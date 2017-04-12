@@ -1,12 +1,12 @@
 <?php
 
-namespace D3\Plugin;
+namespace D3\MLF;
 
 class ShortcodeExample
 {
 	public static function init()
 	{
-		add_shortcode('plugin_name_shortcode_name', array('D3\Plugin\ShortcodeExample', 'render'));
+		add_shortcode('plugin_name_shortcode_name', array('D3\MLF\ShortcodeExample', 'render'));
 	}
 
 	public static function render($args, $content = "")

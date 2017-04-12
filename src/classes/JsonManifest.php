@@ -1,12 +1,7 @@
 <?php
 
-namespace D3\Plugin;
+namespace D3\MLF;
 
-/**
- * Class JsonManifest
- * @package Roots\Sage
- * @author QWp6t
- */
 class JsonManifest
 {
 	/** @var array */

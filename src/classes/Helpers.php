@@ -1,6 +1,6 @@
 <?php
 
-namespace D3\Plugins;
+namespace D3\MLFs;
 
 class Helpers
 {

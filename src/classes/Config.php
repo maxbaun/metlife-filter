@@ -1,6 +1,6 @@
 <?php
 
-namespace D3\Plugin;
+namespace D3\MLF;
 
 class Config
 {

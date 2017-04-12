@@ -13,7 +13,7 @@ require_once $_tests_dir . '/includes/functions.php';
  */
 function _manually_load_plugin()
 {
-	require dirname(dirname(__FILE__)) . '/plugin-name.php';
+	require dirname(dirname(__FILE__)) . '/metlife-filter.php';
 }
 tests_add_filter('muplugins_loaded', '_manually_load_plugin');
 
