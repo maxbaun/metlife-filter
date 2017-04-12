@@ -10,6 +10,12 @@ module.exports.containsElement = (e, elem) => {
 
 module.exports.click = (func, val) => {
 	return e => {
+		return (func && typeof func === 'function') ? func(val || typeof val !== 'undefined' ? val : e) : null;
+	};
+};
+
+module.exports.clickOnly = (func, val) => {
+	return e => {
 		e.stopPropagation();
 		e.preventDefault();
 

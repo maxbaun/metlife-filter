@@ -17,6 +17,10 @@ require_once plugin_dir_path(__FILE__) . 'src/classes/JsonManifest.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Assets.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/ShortcodeFilter.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Updater.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/Taxonomy.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/Dropdown.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/Ajax.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/Cookie.php';
 
 use D3\MLF;
 use D3\MLF\JsonManifest;
@@ -24,6 +28,7 @@ use D3\MLF\Config;
 use D3\MLF\Assets;
 use D3\MLF\Activation;
 use D3\MLF\ShortcodeFilter;
+use D3\MLF\Cookie;
 
 add_action('init', function () {
 	$paths = [
@@ -36,6 +41,7 @@ add_action('init', function () {
 
 	Assets::init($manifest);
 	ShortcodeFilter::init();
+	Cookie::init();
 
 	define('WP_GITHUB_FORCE_UPDATE', true);
 

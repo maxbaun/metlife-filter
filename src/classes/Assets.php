@@ -40,7 +40,7 @@ class Assets
 		$translation_array = array(
 			'ajaxUrl' => admin_url('admin-ajax.php')
 		);
-		wp_localize_script('mlf/main.js', 'PLUGIN_NAME', $translation_array);
+		wp_localize_script('mlf/main.js', 'METLIFE_FILTER', $translation_array);
 		wp_enqueue_script('mlf/main.js');
 	}
 }

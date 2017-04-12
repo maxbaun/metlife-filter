@@ -21,7 +21,8 @@
     },
     "globals": {
         "wp": true,
-        "alert": true
+        "alert": true,
+        "METLIFE_FILTER": true
     },
     "plugins": [
         "import",
