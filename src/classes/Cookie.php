@@ -47,6 +47,9 @@ class Cookie
 		$agentChannel = unserialize(stripcslashes($_COOKIE['mlf_agent_channel']));
 		$appointedState = unserialize(stripcslashes($_COOKIE['mlf_appointed_state']));
 
+		$agentChannel = ($agentChannel) ? $agentChannel : array();
+		$appointedState = ($appointedState) ? $appointedState : array();
+
 		return array(
 			'agent_channel' => $agentChannel,
 			'appointed_state' => $appointedState

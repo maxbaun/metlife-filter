@@ -22,7 +22,7 @@ class Dropdown
 		$this->terms = $this->taxonomy->getTerms();
 
 		$cookieData = Cookie::getCookie();
-		$this->data = $cookieData[$this->id];
+		$this->data = (count($cookieData[$this->id]) != 0) ? $cookieData[$this->id] : $this->terms;
 	}
 
 	public function render()
