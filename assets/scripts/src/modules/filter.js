@@ -1,5 +1,6 @@
 import Dropdown from './dropdown';
 import {cookieSet} from '../utils/cookie';
+import {windowReload} from '../utils/componentHelpers';
 
 export default class Filter {
 	constructor(element) {
@@ -20,6 +21,7 @@ export default class Filter {
 		e.preventDefault();
 		const target = jQuery(e.target);
 
-		cookieSet(target.serialize());
+		cookieSet(target.serialize())
+			.then(windowReload);
 	}
 }

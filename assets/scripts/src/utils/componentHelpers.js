@@ -22,3 +22,7 @@ module.exports.clickOnly = (func, val) => {
 		return (func && typeof func === 'function') ? func(val || typeof val !== 'undefined' ? val : e) : null;
 	};
 };
+
+module.exports.windowReload = () => {
+	window.location.reload();
+};
