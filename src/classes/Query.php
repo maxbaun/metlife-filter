@@ -4,6 +4,7 @@ namespace D3\MLF;
 
 use D3\MLF\Taxonomy;
 use D3\MLF\Cookie;
+use D3\MLF\Helpers;
 use D3\MLF\Constants;
 
 class Query
@@ -81,20 +82,12 @@ class Query
 	{
 		$taxonomyData = new Taxonomy($taxonomy);
 		$taxonomyTerms = $taxonomyData->getTerms();
+		$savedTerms = $taxonomyData->getSavedTerms();
 
 		$cookie = Cookie::getCookie();
-		$setData = (count($cookie[$taxonomy]) > 0 ) ? $cookie[$taxonomy] : array(); //self::getTermIds($taxonomyTerms);
+		$setData = (count($savedTerms) > 0 ) ? $savedTerms : Helpers::getTermIds($taxonomyTerms);
 
 		return $setData;
-	}
-
-	public static function getTermIds($terms)
-	{
-		$termIds = array();
-		foreach ($terms as $term) {
-			$termIds[] = $term->term_id;
-		}
-		return $termIds;
 	}
 }
 

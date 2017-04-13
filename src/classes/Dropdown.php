@@ -3,7 +3,7 @@
 namespace D3\MLF;
 
 use D3\MLF\Taxonomy;
-use D3\MLF\Cookie;
+use D3\MLF\Helpers;
 
 class Dropdown
 {
@@ -20,9 +20,9 @@ class Dropdown
 
 		$this->taxonomy = new Taxonomy($args['taxonomy']);
 		$this->terms = $this->taxonomy->getTerms();
+		$this->savedTerms = $this->taxonomy->getSavedTerms();
 
-		$cookieData = Cookie::getCookie();
-		$this->data = (count($cookieData[$this->id]) != 0) ? $cookieData[$this->id] : $this->terms;
+		$this->data = (count($savedTerms) != 0) ? $savedTerms : Helpers::getTermIds($this->terms);
 	}
 
 	public function render()

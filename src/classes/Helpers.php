@@ -1,8 +1,15 @@
 <?php
 
-namespace D3\MLFs;
+namespace D3\MLF;
 
 class Helpers
 {
-// Put all plugin helper functions here
+	public static function getTermIds($terms)
+	{
+		$termIds = array();
+		foreach ($terms as $term) {
+			$termIds[] = $term->term_id;
+		}
+		return $termIds;
+	}
 }
