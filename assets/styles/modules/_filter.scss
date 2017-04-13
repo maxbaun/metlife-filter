@@ -1,15 +1,26 @@
 .mlf-filter {
-	margin: 0 auto;
-	@include clearfix();
+	text-align: center;
+	@include mobile() {
+		position: absolute;
+		background-color: $grey3;
+		width: 320px;
+		right: 23px;
+	}
 }
 
 .mlf-filter-form {
-	> * {
-		float: left !important;
-		padding: 0 20px !important;
-		vertical-align: middle !important;
-		line-height: 55px;
-	}
+	display: inline-block;
+}
+
+.mlf-filter-row {
+	@include clearfix();
+}
+
+*[class^="mlf-filter-col"] {
+	float: left;
+	padding: 0 15px;
+	vertical-align: middle;
+	line-height: 55px;
 }
 
 .mlf-filter-title {
@@ -17,18 +28,16 @@
 	text-align: center;
 	margin: auto 0px;
 	float: left;
-	border-right: 1px solid $grey2;
 }
 
-.mlf-filter-dropdown-group {
-	margin-top: 0;
-	margin-right: 10px;
-	border-left: $grey 1px solid;
-	display: block;
-}
+// .mlf-filter-dropdown-group {
+// 	margin-top: 0;
+// 	margin-right: 10px;
+// 	display: block;
+// }
 
 a.mlf-filter-link {
-	margin: 0 0 0 20px;
+	padding: 0;
 	font-size: 16px;
 	text-decoration: underline;
 	font-weight: normal;

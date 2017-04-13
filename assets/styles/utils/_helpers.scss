@@ -1,0 +1,21 @@
+.mlf-filter-border-right {
+	border-right-width: 1px;
+	border-right-style: solid;
+	&.mlf-filter-border-dark {
+		border-right-color: $grey2;
+	}
+	&.mlf-filter-border-light {
+		border-right-color: $grey;
+	}
+}
+
+.mlf-filter-border-left {
+	border-left-width: 1px;
+	border-left-style: solid;
+	&.mlf-filter-border-dark {
+		border-left-color: $grey2;
+	}
+	&.mlf-filter-border-light {
+		border-left-color: $grey;
+	}
+}

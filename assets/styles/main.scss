@@ -1,7 +1,9 @@
 // @import "~jquery-ui-bundle/jquery-ui.css";
 // @import "~jquery-ui-bundle/jquery-ui.theme.css";
 @import "utils/variables";
+@import "utils/responsive";
 @import "utils/mixins";
+@import "utils/helpers";
 
 @import "modules/filter";
 @import "modules/buttons";
