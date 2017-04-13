@@ -23,6 +23,8 @@ require_once plugin_dir_path(__FILE__) . 'src/classes/Ajax.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Cookie.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Query.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Constants.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/AdminMenu.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/AdminSettings.php';
 
 use D3\MLF;
 use D3\MLF\JsonManifest;
@@ -33,6 +35,8 @@ use D3\MLF\ShortcodeFilter;
 use D3\MLF\Cookie;
 use D3\MLF\Query;
 use D3\MLF\Constants;
+use D3\MLF\AdminMenu;
+use D3\MLF\AdminSettings;
 
 add_action('init', function () {
 	$paths = [
@@ -47,6 +51,8 @@ add_action('init', function () {
 	ShortcodeFilter::init();
 	Cookie::init();
 	Query::init();
+	AdminMenu::init();
+	AdminSettings::init();
 
 	define('WP_GITHUB_FORCE_UPDATE', true);
 

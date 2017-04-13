@@ -20,7 +20,8 @@ class Dropdown
 		$this->id = $args['taxonomy'];
 
 		$this->taxonomy = new Taxonomy($args['taxonomy']);
-		$this->terms = $this->taxonomy->getTerms();
+		$this->terms = $this->taxonomy->getActiveTerms($visibleFilters);
+
 		$this->savedTerms = $this->taxonomy->getSavedTerms();
 
 		$this->data = (count($this->savedTerms) != 0) ? $this->savedTerms : Helpers::getTermIds($this->terms);

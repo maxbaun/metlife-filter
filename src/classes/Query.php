@@ -3,7 +3,6 @@
 namespace D3\MLF;
 
 use D3\MLF\Taxonomy;
-use D3\MLF\Cookie;
 use D3\MLF\Helpers;
 use D3\MLF\Constants;
 
@@ -48,13 +47,13 @@ class Query
 			array(
 				'taxonomy' => 'agent_channel',
 				'field' => 'term_id',
-				'terms' => self::getSetMeta('agent_channel'),
+				'terms' => self::getActiveTerms('agent_channel'),
 				'operator' => 'IN'
 			),
 			array(
 				'taxonomy' => 'appointed_state',
 				'field' => 'term_id',
-				'terms' => self::getSetMeta('appointed_state'),
+				'terms' => self::getActiveTerms('appointed_state'),
 				'operator' => 'IN'
 			)
 		);
@@ -66,7 +65,7 @@ class Query
 			return $args;
 		}
 
-		$value = self::getSetMeta($taxonomy);
+		$value = self::getActiveTerms($taxonomy);
 
 
 		if (!isset($value) || empty($value) || !count($value)) {
@@ -78,69 +77,25 @@ class Query
 		return $args;
 	}
 
-	public static function getSetMeta($taxonomy)
+	public static function getActiveTerms($taxonomy)
 	{
 		$taxonomyData = new Taxonomy($taxonomy);
-		$taxonomyTerms = $taxonomyData->getTerms();
+		$taxonomyTerms = $taxonomyData->getActiveTerms();
 		$savedTerms = $taxonomyData->getSavedTerms();
 
-		$cookie = Cookie::getCookie();
-		$setData = (count($savedTerms) > 0 ) ? $savedTerms : Helpers::getTermIds($taxonomyTerms);
+		$activeTerms = (count($savedTerms) > 0 ) ? $savedTerms : Helpers::getTermIds($taxonomyTerms);
 
-		return $setData;
-	}
-}
-
-function aaaaaaaaaaaaaadsfasdfas($query)
-{
-	if ($query->is_category() && $query->is_main_query() && !is_admin()) {
-		// Specify what do we want from the terms function -AM
-		$args               = array(
-			'fields' => 'id=>slug'
-		);
-		// Call the get_terms function to get all the agent channel and appointed state ids -AM
-		$allchannels        = get_terms('agent_channel', $args);
-		$allstates          = get_terms('appointed_state', $args);
-		// Ids are the keys of te associative array that us returned -AM
-		$allchannels        = array_keys($allchannels);
-		$allstates          = array_keys($allstates);
-		$channel_cookie_arr = unserialize(stripcslashes($_COOKIE["mlah_agent_channel"]));
-		$state_cookie_arr   = unserialize(stripcslashes($_COOKIE["mlah_appointed_state"]));
-		// Read cookies in order to update checkboxes or set to all
-		if ($agent_channel == null) {
-			if (isset($_COOKIE["mlah_agent_channel"]) && $channel_cookie_arr != null) {
-				$agent_channel = $channel_cookie_arr;
-			} else {
-				$agent_channel = $allchannels;
-			}
-		}
-
-		if ($appointed_state == null) {
-			if (isset($_COOKIE["mlah_appointed_state"]) && $state_cookie_arr != null) {
-				$appointed_state = $state_cookie_arr;
-			} else {
-				$appointed_state = $allstates;
-			}
-		}
-
-		$taxquery = array(
-			array(
-				'taxonomy' => 'agent_channel',
-				'field' => 'term_id',
-				'terms' => $agent_channel
-			),
-			array(
-				'taxonomy' => 'appointed_state',
-				'field' => 'term_id',
-				'terms' => $appointed_state
-			)
-		);
-
-		$query->set('tax_query', $taxquery);
-		$query->set('post_type', array(
-			'post'
-		));
+		return $activeTerms;
 	}
 
-	return $query;
+	public static function getInactiveTerms($taxonomy)
+	{
+		$taxonomyData = new Taxonomy($taxonomy);
+		$taxonomyTerms = $taxonomyData->getInActiveTerms();
+		$savedTerms = $taxonomyData->getSavedTerms();
+
+		$inactiveTerms = (count($savedTerms) > 0 ) ? $savedTerms : Helpers::getTermIds($taxonomyTerms);
+
+		return $inactiveTerms;
+	}
 }
