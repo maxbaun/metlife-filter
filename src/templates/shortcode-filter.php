@@ -42,7 +42,12 @@ use D3\MLF\Dropdown;
 				</div>
 			</div>
 			<div class="mlf-filter-col-1 mlf-hidden-mobile">
-				<a class="mlf-filter-link" href="#">Advanced Search</a>
+				<a
+					class="mlf-filter-link"
+					href="<?php echo $advancedSearchPage; ?>"
+					>
+					<?php echo $advancedSearchText; ?>
+				</a>
 			</div>
 		</div>
 	</form>
