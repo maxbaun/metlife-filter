@@ -8,6 +8,7 @@ use D3\MLF\Helpers;
 class Dropdown
 {
 	private $terms = array();
+	private $savedTerms = array();
 	private $title = '';
 	private $id = '';
 	private $taxonomy = null;
@@ -22,7 +23,7 @@ class Dropdown
 		$this->terms = $this->taxonomy->getTerms();
 		$this->savedTerms = $this->taxonomy->getSavedTerms();
 
-		$this->data = (count($savedTerms) != 0) ? $savedTerms : Helpers::getTermIds($this->terms);
+		$this->data = (count($this->savedTerms) != 0) ? $this->savedTerms : Helpers::getTermIds($this->terms);
 	}
 
 	public function render()
