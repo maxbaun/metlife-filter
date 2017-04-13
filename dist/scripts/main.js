@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "603621207bf826acb6c9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6baf3b8068368b7155a8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1707,24 +1707,6 @@ Dropdown.prototype.show = function show () {
 	this.open = true;
 };
 
-Dropdown.prototype.dataReceived = function dataReceived (data) {
-	console.log(data);
-
-	// data.forEach(d => {
-	// const input = this.inputs.find(input => jQuery(input).val() === d);
-	//
-	// if (input) {
-	// 	jQuery(input).attr('checked', 'checked');
-	// }
-	// });
-	//
-	// if (data.length === this.inputs.length - 1) {
-	// this.toggleAllInputs(true);
-	// }
-	//
-	// this.updateText();
-};
-
 /* harmony default export */ __webpack_exports__["a"] = (Dropdown);
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
@@ -1759,9 +1741,6 @@ var Filter = function Filter(element) {
 	this.form = this.element.find('form').first();
 
 	this.form.submit(this.handleSubmit.bind(this));
-
-	__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils_cookie__["cookieGet"])()
-		.then(this.setData.bind(this));
 };
 
 Filter.prototype.handleSubmit = function handleSubmit (e) {
@@ -1769,10 +1748,6 @@ Filter.prototype.handleSubmit = function handleSubmit (e) {
 	var target = jQuery(e.target);
 
 	__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__utils_cookie__["cookieSet"])(target.serialize());
-};
-
-Filter.prototype.setData = function setData (data) {
-	this.dropdowns[0].dataReceived(data['agent_channel']); //eslint-disable-line
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Filter);
@@ -1880,7 +1855,7 @@ module.exports.clickOnly = function (func, val) {
 /***/ }),
 /* 15 */
 /* unknown exports provided */
-/* exports used: cookieGet, cookieSet */
+/* exports used: cookieSet */
 /*!*************************************!*\
   !*** ./scripts/src/utils/cookie.js ***!
   \*************************************/

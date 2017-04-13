@@ -44,8 +44,8 @@ class Cookie
 
 	public static function getCookie()
 	{
-		$agentChannel = unserialize(stripcslashes($_COOKIE['mlf_agent_channel']));
-		$appointedState = unserialize(stripcslashes($_COOKIE['mlf_appointed_state']));
+		$agentChannel = (isset($_COOKIE['mlf_agent_channel'])) ? unserialize(stripcslashes($_COOKIE['mlf_agent_channel'])) : false;
+		$appointedState = (isset($_COOKIE['mlf_appointed_state'])) ? unserialize(stripcslashes($_COOKIE['mlf_appointed_state'])) : false;
 
 		$agentChannel = ($agentChannel) ? $agentChannel : array();
 		$appointedState = ($appointedState) ? $appointedState : array();

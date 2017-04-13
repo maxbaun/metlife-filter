@@ -21,6 +21,8 @@ require_once plugin_dir_path(__FILE__) . 'src/classes/Taxonomy.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Dropdown.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Ajax.php';
 require_once plugin_dir_path(__FILE__) . 'src/classes/Cookie.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/Query.php';
+require_once plugin_dir_path(__FILE__) . 'src/classes/Constants.php';
 
 use D3\MLF;
 use D3\MLF\JsonManifest;
@@ -29,6 +31,8 @@ use D3\MLF\Assets;
 use D3\MLF\Activation;
 use D3\MLF\ShortcodeFilter;
 use D3\MLF\Cookie;
+use D3\MLF\Query;
+use D3\MLF\Constants;
 
 add_action('init', function () {
 	$paths = [
@@ -42,6 +46,7 @@ add_action('init', function () {
 	Assets::init($manifest);
 	ShortcodeFilter::init();
 	Cookie::init();
+	Query::init();
 
 	define('WP_GITHUB_FORCE_UPDATE', true);
 
