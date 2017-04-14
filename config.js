@@ -8,7 +8,7 @@ const rootPath = process.cwd();
 const config = {
 	copy: 'images/**/*',
 	proxyUrl: 'http://localhost:3000',
-	devUrl: 'http://metlife.dev',
+	devUrl: 'http://d3.dev:8002',
 	cacheBusting: '[name]_[hash:8]',
 	publicPath: '/src/plugins/metlife-filter',
 	paths: {

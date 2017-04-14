@@ -67,7 +67,6 @@ class Query
 
 		$value = self::getActiveTerms($taxonomy);
 
-
 		if (!isset($value) || empty($value) || !count($value)) {
 			return $args;
 		}

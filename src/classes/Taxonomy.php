@@ -58,6 +58,10 @@ class Taxonomy
 				$this->activeTerms[] = $this->getTermById($term);
 			}
 		}
+
+		if (count($this->activeTerms) == 0) {
+			$this->activeTerms = $this->terms;
+		}
 	}
 
 	public function getActiveTerms()

@@ -38,6 +38,10 @@ class ShortcodeFilter
 			return true;
 		}
 
+		if (count($showOnPages) == 0) {
+			return true;
+		}
+
 		if (!in_array($post->ID, $showOnPages)) {
 			return false;
 		}

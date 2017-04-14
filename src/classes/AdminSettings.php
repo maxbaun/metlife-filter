@@ -11,7 +11,7 @@ class AdminSettings
 		self::$adminSettings = array(
 			array(
 				'id' => 'metlife_filter_advanced_search_page',
-				'default' => get_option('page_on_front')
+				'default' => get_search_link()
 			),
 			array(
 				'id' => 'metlife_filter_advanced_search_text',
@@ -19,15 +19,15 @@ class AdminSettings
 			),
 			array(
 				'id' => 'metlife_filter_show_on_pages',
-				'default' => null
+				'default' => array()
 			),
 			array(
 				'id' => 'metlife_filter_active_agent_channel',
-				'default' => null
+				'default' => array()
 			),
 			array(
 				'id' => 'metlife_filter_active_appointed_state',
-				'default' => null
+				'default' => array()
 			)
 		);
 
@@ -186,7 +186,7 @@ class AdminSettings
 		$optionValue = '';
 
 		try {
-			$optionValue = (get_option($option)) ? get_option($option) : self::getDefaultOption($option);
+			$optionValue = (!empty(get_option($option))) ? get_option($option) : self::getDefaultOption($option);
 		} catch (Exception $e) {
 
 		}
@@ -200,7 +200,7 @@ class AdminSettings
 
 		try {
 			foreach (self::$adminSettings as $setting) {
-				if ($setting['id'] === 'option') {
+				if ($setting['id'] === $option) {
 					$defaultOption = $setting['default'];
 				}
 			}
