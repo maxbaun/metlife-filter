@@ -97,7 +97,7 @@ class AdminSettings
 
 			// check if this option is the currently selected option
 			$selected = '';
-			if ($selectedValue == $value || in_array($value, $selectedValue)) {
+			if ($selectedValue == $value || (is_array($selectedValue) && in_array($value, $selectedValue))) {
 				$selected = ' selected="selected" ';
 			}
 
