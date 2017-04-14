@@ -4,7 +4,7 @@
 Plugin Name: Metlife Filter
 Plugin URI: http://d3applications.com
 Description: Filter Plugin For Metlife
-Version: 1.0.1
+Version: 1.0.2
 Author: Max Baun
 Author URI: http://github.com/maxbaun
 License: GPL2

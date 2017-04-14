@@ -1,7 +1,7 @@
 {
   "name": "metlife-filter",
   "description": "Filter Plugin For Metlife",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "scripts": {
     "start": "webpack --hide-modules --progress --watch --config webpack.config.js",
