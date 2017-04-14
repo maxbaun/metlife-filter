@@ -38,7 +38,16 @@ a.mlf-filter-link {
 }
 
 .mlf-filter-form-submit {
+	position: relative;
 	input {
 		margin-bottom: 0px;
 	}
+}
+
+.mlf-filter-submit-loader {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 62%;
+	transform: translateX(-50%) translateY(-50%);
 }

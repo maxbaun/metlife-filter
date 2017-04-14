@@ -39,6 +39,11 @@ use D3\MLF\Dropdown;
 						id="mlf_filter_form_submit"
 						value="Apply"
 						>
+					<div class="mlf-filter-submit-loader" data-loader="loader">
+						<?php
+							include('loader.php');
+						?>
+					</div>
 				</div>
 			</div>
 			<div class="mlf-filter-col-1 mlf-hidden-mobile">

@@ -26,3 +26,11 @@ module.exports.clickOnly = (func, val) => {
 module.exports.windowReload = () => {
 	window.location.reload();
 };
+
+module.exports.buttonLoading = button => {
+	const loader = jQuery(button).siblings('[data-loader]');
+
+	button.attr('disabled', 'disabled');
+	jQuery(button).css('opacity', '0');
+	loader.show();
+};

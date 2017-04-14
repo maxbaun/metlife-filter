@@ -1,0 +1,10 @@
+.mlf-loader {
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+
+	svg path,
+	svg rect{
+		fill: $white;
+	}
+}

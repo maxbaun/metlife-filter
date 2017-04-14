@@ -1,11 +1,13 @@
 import Dropdown from './dropdown';
 import {cookieSet} from '../utils/cookie';
-import {windowReload} from '../utils/componentHelpers';
+import {windowReload, buttonLoading} from '../utils/componentHelpers';
 
 export default class Filter {
 	constructor(element) {
 		this.element = jQuery(element);
 		this.dropdowns = [];
+
+		this.submitButton = this.element.find('input[type="submit"]').first();
 
 		this.element.find('.mlf-filter-dropdown')
 			.each((index, elem) => {
@@ -20,6 +22,8 @@ export default class Filter {
 	handleSubmit(e) {
 		e.preventDefault();
 		const target = jQuery(e.target);
+
+		buttonLoading(this.submitButton);
 
 		cookieSet(target.serialize())
 			.then(windowReload);
