@@ -1,6 +1,6 @@
 {
     "name": "maxbaun/metlife-filter",
-	"version" : "1.0.2",
+	"version" : "1.0.3",
     "description": "Filter Plugin For Metlife",
     "type": "wordpress-plugin",
     "require-dev": {
