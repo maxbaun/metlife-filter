@@ -4,8 +4,11 @@ namespace D3\MLF;
 
 class Cookie
 {
+	private static $cookie = array();
+
 	public static function init()
 	{
+		self::cacheCookie();
 		add_action('wp_ajax_mlf_set_cookie', array('D3\\MLF\\Cookie', 'setCookieCallback'));
 		add_action('wp_ajax_nopriv_mlf_set_cookie', array('D3\\MLF\\Cookie', 'setCookieCallback'));
 		add_action('wp_ajax_mlf_get_cookie', array('D3\\MLF\\Cookie', 'getCookieCallback'));
@@ -42,7 +45,7 @@ class Cookie
 		Ajax::success('', self::getCookie());
 	}
 
-	public static function getCookie()
+	private static function cacheCookie()
 	{
 		$agentChannel = (isset($_COOKIE['mlf_agent_channel'])) ? unserialize(stripcslashes($_COOKIE['mlf_agent_channel'])) : false;
 		$appointedState = (isset($_COOKIE['mlf_appointed_state'])) ? unserialize(stripcslashes($_COOKIE['mlf_appointed_state'])) : false;
@@ -50,9 +53,14 @@ class Cookie
 		$agentChannel = ($agentChannel) ? $agentChannel : array();
 		$appointedState = ($appointedState) ? $appointedState : array();
 
-		return array(
+		self::$cookie = array(
 			'agent_channel' => $agentChannel,
 			'appointed_state' => $appointedState
 		);
+	}
+
+	public static function getCookie()
+	{
+		return self::$cookie;
 	}
 }
