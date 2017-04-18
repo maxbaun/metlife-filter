@@ -71,7 +71,7 @@ class Query
 			return $args;
 		}
 
-		$args[$taxonomy] = $value;
+		$args[$taxonomy] = array($value);
 
 		return $args;
 	}
