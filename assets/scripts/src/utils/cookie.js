@@ -1,3 +1,5 @@
+const Promise = require('bluebird');
+
 module.exports.cookieSet = data => {
 	const action = `${METLIFE_FILTER.ajaxUrl}?action=mlf_set_cookie`;
 	return new Promise((resolve, reject) => {

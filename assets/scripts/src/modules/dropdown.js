@@ -46,9 +46,12 @@ export default class Dropdown {
 	}
 
 	updateText() {
-		const checkedInputs = this.getCheckedInputs();
-		const text = this.getText(checkedInputs);
-		this.label.text(text);
+		setTimeout(() => {
+			const checkedInputs = this.getCheckedInputs();
+			const text = this.getText(checkedInputs);
+			this.label.text(text);
+		}, 200);
+
 		return true;
 	}
 
